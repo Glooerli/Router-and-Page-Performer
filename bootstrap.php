@@ -2,17 +2,15 @@
 
 namespace roobique
 {
-
     use roobique\Routers\Router;
     use roobique\ValueObjects\Uri;
 
     ini_set('display_errors', 1);
     error_reporting(E_ALL);
-
-    require __DIR__ . '/src/autoload.php';
-
     date_default_timezone_set('Europe/Zurich');
 
+    require __DIR__ . '/src/autoload.php';
+    
     $router = new Router;
     $uri = new Uri('http://' . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI']);
 
