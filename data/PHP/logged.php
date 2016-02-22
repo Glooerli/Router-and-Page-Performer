@@ -1,18 +1,20 @@
 <?php
+
+namespace roobique\PHP {
 	session_start();
 	require('./roobiqueConfig.php');
 	require('./pdoConnect.php');
 	use roobique\Routers\Router;
 
-	if(isset($_GET['code'])){
+	if (isset($_GET['code'])) {
 		$code = $_GET['code'];
 
 		$instaURL = 'https://api.instagram.com/oauth/access_token';
 		$access_token_settings = array('client_id' => clientID,
-									   'client_secret' => clientSecret,
-									   'grant_type' => 'authorization_code',
-									   'redirect_uri' => redirectURI,
-									   'code' => $code);
+			'client_secret' => clientSecret,
+			'grant_type' => 'authorization_code',
+			'redirect_uri' => redirectURI,
+			'code' => $code);
 
 		$curl = curl_init($instaURL);
 		curl_setopt($curl, CURLOPT_POST, true);
@@ -40,7 +42,7 @@
 				'profile_picture' => $results['user']['profile_picture'],
 				'full_name' => $results['user']['full_name']
 			));
-		}else{
+		} else {
 			$updateStatement = $config->prepare("UPDATE Users SET username=:username, bio=:bio, website=:website, profile_picture=:profile_picture, full_name=:full_name WHERE InstaID='$InstaID'");
 			$updateStatement->execute(array(
 				'username' => $results['user']['username'],
@@ -53,10 +55,13 @@
 
 		$_SESSION['access_token'] = $results['access_token'];
 
-		echo 'login succeeded!';echo '<br />';
+		echo 'login succeeded!';
+		echo '<br />';
 		echo 'waiting for redirect...';
 
-	}else{
-		echo 'There was a problem.';echo '<br />';
+	} else {
+		echo 'There was a problem.';
+		echo '<br />';
 		echo 'Try again in a little while';
 	}
+}
