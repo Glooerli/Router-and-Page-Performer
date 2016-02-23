@@ -6,4 +6,4 @@
 	define('clientID', '68ceae6503354d5ba3ec7a3fd9c7e5ee');
 	define('clientSecret', '78a876ee5b3445f3ba1ddfe531768361');
 	define('websiteURL', 'http://roobique.com');
-	define('redirectURI', 'http://gloor.cachin.ch/login/instagram');
+	define('redirectURI', 'http://gloor.scachin.ch/login/instagram');
