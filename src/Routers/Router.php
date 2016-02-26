@@ -13,6 +13,7 @@ namespace roobique\Routers
     use roobique\Controllers\ProfilePageController;
     use roobique\Controllers\FrontPageController;
     use roobique\ValueObjects\Uri;
+    use roobique\PHP\logged;
 
     class Router
     {
@@ -31,7 +32,7 @@ namespace roobique\Routers
                 case '/profile':
                     return new ProfilePageController;
                 case '/login/instagram':
-                    return new ProfilePageController;
+                    return new logged;
             }
         }
     }
