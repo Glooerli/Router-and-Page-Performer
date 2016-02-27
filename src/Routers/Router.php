@@ -2,8 +2,8 @@
 /**
  * Created by PhpStorm.
  * User: Lukas
- * Date: 09.02.2016
- * Time: 23:46
+ * Date: 27.02.2016
+ * Time: 03:30
  */
 
 namespace oop_Learn\Routers
@@ -12,23 +12,12 @@ namespace oop_Learn\Routers
 
     class Router
     {
-        /**
-         * @param Uri $uri
-         *
-         * @return AbstractController
-         */
-        public function route(Uri $uri)
-        {
-            $path = $uri->getPath();
 
-            switch ($path) {
-                case '/':
-                    return "Huso";
-                case '/profile':
-                    return "Huso";
-                case '/login/instagram':
-                    return "Huso";
-            }
+        public function route()
+        {
+
+
         }
+
     }
 }
