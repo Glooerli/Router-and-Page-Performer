@@ -6,7 +6,7 @@
  * Time: 11:38
  */
 
-namespace roobique\ValueObjects
+namespace oop_Learn\ValueObjects
 {
 
     class Uri

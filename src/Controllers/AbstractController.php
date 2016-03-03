@@ -6,12 +6,12 @@
  * Time: 23:35
  */
 
-namespace roobique\Controllers
+namespace oop_Learn\Controllers
 {
 
-    use roobique\Loaders\Loader;
-    use roobique\Responses\Response;
-    use roobique\ValueObjects\Uri;
+    use oop_Learn\Loaders\Loader;
+    use oop_Learn\Responses\Response;
+    use oop_Learn\ValueObjects\Uri;
 
     abstract class AbstractController
     {

@@ -6,13 +6,13 @@
  * Time: 23:38
  */
 
-namespace roobique\Controllers
+namespace oop_Learn\Controllers
 {
     class FrontPageController extends AbstractController
     {
-        protected function getBody()
+        public function getBody()
         {
-            return $this->loadDom('/var/www/roobique/data/Pages/index.html')->saveXML();
+            return $this->loadDom('/var/www/oop_Learn/data/Pages/index.html')->saveXML();
         }
     }
 }

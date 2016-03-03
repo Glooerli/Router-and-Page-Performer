@@ -6,14 +6,12 @@
  * Time: 23:46
  */
 
-namespace roobique\Routers
+namespace oop_Learn\Routers
 {
 
-    use roobique\Controllers\AbstractController;
-    use roobique\Controllers\ProfilePageController;
-    use roobique\Controllers\FrontPageController;
-    use roobique\ValueObjects\Uri;
-    use roobique\PHP\logged;
+    use oop_Learn\Controllers\AbstractController;
+    use oop_Learn\Controllers\FrontPageController;
+    use oop_Learn\ValueObjects\Uri;
 
     class Router
     {
@@ -30,9 +28,10 @@ namespace roobique\Routers
                 case '/':
                     return new FrontPageController;
                 case '/profile':
-                    return new ProfilePageController;
+                    return new FrontPageController;
                 case '/login/instagram':
-                    return new logged;
+                    echo 'login';
+                    break;
             }
         }
     }

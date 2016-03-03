@@ -6,15 +6,12 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
-                'roobique\\controllers\\frontpagecontroller' => '/Controllers/FrontPageController.php',
-                'roobique\\controllers\\abstractcontroller' => '/Controllers/AbstractController.php',
-                'roobique\\controllers\\profilepagecontroller' => '/Controllers/ProfilePageController.php',
-                'roobique\\controllers\\logincontroller' => '/Controllers/LoginController.php',
-                'roobique\\loaders\\loader' => '/Loaders/Loader.php',
-                'roobique\\logins\\connecttoinsta' => '/Logins/ConnectToInsta.php',
-                'roobique\\responses\\response' => '/Responses/Response.php',
-                'roobique\\routers\\router' => '/Routers/Router.php',
-                'roobique\\valueobjects\\uri' => '/ValueObjects/Uri.php',
+                'oop_learn\\controllers\\frontpagecontroller' => '/Controllers/FrontPageController.php',
+                'oop_learn\\controllers\\abstractcontroller' => '/Controllers/AbstractController.php',
+                'oop_learn\\loaders\\loader' => '/Loaders/Loader.php',
+                'oop_learn\\responses\\response' => '/Responses/Response.php',
+                'oop_learn\\routers\\router' => '/Routers/Router.php',
+                'oop_learn\\valueobjects\\uri' => '/ValueObjects/Uri.php',
             );
         }
         $cn = strtolower($class);

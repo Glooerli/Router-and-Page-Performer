@@ -6,7 +6,7 @@
  * Time: 23:45
  */
 
-namespace roobique\Responses
+namespace oop_Learn\Responses
 {
 
     class Response

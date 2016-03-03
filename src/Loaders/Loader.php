@@ -6,11 +6,10 @@
  * Time: 15:17
  */
 
-namespace roobique\Loaders
+namespace oop_Learn\Loaders
 {
     use DOMDocument;
 
-    // sehr schlechter name DomLoader
     class Loader
     {
         /**

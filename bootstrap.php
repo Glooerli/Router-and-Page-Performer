@@ -1,9 +1,9 @@
 <?php
 
-namespace roobique
+namespace oop_Learn
 {
-    use roobique\Routers\Router;
-    use roobique\ValueObjects\Uri;
+    use oop_Learn\Routers\Router;
+    use oop_Learn\ValueObjects\Uri;
 
     require __DIR__ . '/src/autoload.php';
 
