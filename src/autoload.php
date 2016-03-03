@@ -5,6 +5,9 @@ spl_autoload_register(
         static $classes = null;
         if ($classes === null) {
             $classes = array(
+                'oop_learn\\controllers\\frontpagecontroller' => '/Controllers/FrontPageController.php',
+                'oop_learn\\controllers\\abstractcontroller' => '/Controllers/AbstractController.php',
+                'oop_learn\\loaders\\pagedomloader' => '/Loaders/PageDOMLoader.php',
                 'oop_learn\\routers\\router' => '/Routers/Router.php',
                 'oop_learn\\valueobjects\\uri' => '/ValueObjects/Uri.php',
             );

@@ -1,5 +1,6 @@
 <?php
 
+
 namespace oop_Learn
 {
 
@@ -11,6 +12,9 @@ namespace oop_Learn
     error_reporting(E_ALL);
     date_default_timezone_set('Europe/Zurich');
 
-    $path = $_SERVER('SERVER_NAME');
-    echo $path;
+    $router = new Router();
+    $uri = $_SERVER['REQUEST_URI'];
+
+    $router->route($uri);
+
 }
