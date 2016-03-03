@@ -1,6 +1,9 @@
 <?php
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> origin/master
 spl_autoload_register(
     function($class) {
         static $classes = null;
@@ -8,8 +11,12 @@ spl_autoload_register(
             $classes = array(
                 'oop_learn\\controllers\\frontpagecontroller' => '/Controllers/FrontPageController.php',
                 'oop_learn\\controllers\\abstractcontroller' => '/Controllers/AbstractController.php',
+<<<<<<< HEAD
                 'oop_learn\\loaders\\loader' => '/Loaders/Loader.php',
                 'oop_learn\\responses\\response' => '/Responses/Response.php',
+=======
+                'oop_learn\\loaders\\pagedomloader' => '/Loaders/PageDOMLoader.php',
+>>>>>>> origin/master
                 'oop_learn\\routers\\router' => '/Routers/Router.php',
                 'oop_learn\\valueobjects\\uri' => '/ValueObjects/Uri.php',
             );
