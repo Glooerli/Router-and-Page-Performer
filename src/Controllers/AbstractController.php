@@ -9,7 +9,6 @@
 namespace oop_Learn\Controllers
 {
 
-<<<<<<< HEAD
     use oop_Learn\Loaders\Loader;
     use oop_Learn\Responses\Response;
     use oop_Learn\ValueObjects\Uri;
@@ -52,30 +51,11 @@ namespace oop_Learn\Controllers
         {
             if ($this->loader === null) {
                 $this->loader = new Loader;
-=======
-    use oop_Learn\Loaders\PageDOMLoader;
-
-    abstract class AbstractController
-    {
-        abstract protected function getBody();
-
-        /**
-         * @var
-         *
-         */
-        private $loader;
-
-        protected function getDOMLoader()
-        {
-            if ($this->loader === null) {
-                $this->loader = new PageDOMLoader;
->>>>>>> origin/master
             }
 
             return $this->loader;
         }
 
-<<<<<<< HEAD
         /**
          * @param string $path
          * @return \DOMDocument
@@ -86,13 +66,6 @@ namespace oop_Learn\Controllers
         }
 
         abstract protected function getBody();
-=======
-        public function startDOMLoader($path)
-        {
-            return $this->getDOMLoader()->Load($path);
-        }
-
->>>>>>> origin/master
     }
 }
 
